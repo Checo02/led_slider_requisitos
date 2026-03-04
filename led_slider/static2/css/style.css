@@ -1,0 +1,260 @@
+/* Reset y Fuentes */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: #f9f9fb; /* Blanco hueso/gris muy tenue */
+  color: #1a1a1a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+
+.sub {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.logout {
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.logout:hover {
+  background: #f4f4f4;
+  border-color: #ccc;
+}
+
+/* Grid de Tarjetas */
+.wrap {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.04);
+  border-color: #d1d1d1;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* El indicador LED (Minimalista) */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e0e0e0; /* Color neutro cuando está apagado */
+  position: relative;
+}
+
+/* Estilo para cuando el dot esté activo (ejemplo: .dot.active) */
+.dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+.titles h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.titles p {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pill {
+  margin-left: auto;
+  font-size: 0.7rem;
+  background: #f0f0f2;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 600;
+  border: none;
+}
+
+/* Sliders (Modernos y Limpios) */
+input[type=range] {
+  width: 100%;
+  appearance: none;
+  background: #eee;
+  height: 6px;
+  border-radius: 10px;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Consola (Estilo Papel) */
+.console {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.console-head {
+  background: #fafafa;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.console-head h3 {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.log {
+  padding: 1.2rem;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.8rem;
+  color: #444;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+/* Estilos para Login (auth) */
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.auth-card {
+  background: #ffffff;
+  padding: 3.5rem;
+  border-radius: 24px;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 2.5rem;
+}
+
+.auth-form label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.6rem;
+}
+
+.auth-form input {
+  background: #f9f9f9;
+  border: 1px solid #e2e2e2;
+  color: #1a1a1a;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #000;
+  background: #fff;
+}
+
+.auth-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.1s, opacity 0.2s;
+  margin-top: 1rem;
+}
+
+.auth-btn:hover {
+  opacity: 0.9;
+}
+
+.auth-btn:active {
+  transform: scale(0.98);
+}
